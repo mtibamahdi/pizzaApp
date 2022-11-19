@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.util.*;
 
 @Data
 @NoArgsConstructor
@@ -23,6 +23,9 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String reference;
+
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+    private List<OrderLine> bookPublishers = new ArrayList<>();
 
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Column(updatable = false)

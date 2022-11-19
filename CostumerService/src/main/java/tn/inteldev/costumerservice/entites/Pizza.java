@@ -9,7 +9,9 @@ import tn.inteldev.costumerservice.entites.enums.DoughType;
 import tn.inteldev.costumerservice.entites.enums.PizzaSize;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
